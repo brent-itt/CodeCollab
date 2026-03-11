@@ -16,10 +16,8 @@ chdir(__DIR__ . '/..');
 
 // Create writable bootstrap cache and storage dirs in /tmp BEFORE bootstrapping
 $storagePath = '/tmp/storage';
-$bootstrapPath = '/tmp/bootstrap';
 
 $dirs = [
-    $bootstrapPath . '/cache',
     $storagePath . '/app/public',
     $storagePath . '/framework/cache/data',
     $storagePath . '/framework/sessions',
@@ -43,10 +41,9 @@ require __DIR__ . '/../vendor/autoload.php';
 
 // Bootstrap Laravel
 try {
-    $app = require_once __DIR__ . '/../bootstrap/app.php';
+    $app = require __DIR__ . '/../bootstrap/app.php';
 
-    // Redirect bootstrap cache and storage to writable /tmp paths
-    $app->useBootstrapPath($bootstrapPath);
+    // Redirect only storage to writable /tmp (bootstrap/cache is committed to git)
     $app->useStoragePath($storagePath);
 
     $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
