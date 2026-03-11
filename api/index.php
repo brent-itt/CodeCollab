@@ -33,6 +33,11 @@ foreach ($dirs as $dir) {
 
 putenv('VIEW_COMPILED_PATH=' . $storagePath . '/framework/views');
 
+// Override APP_KEY to ensure correct value regardless of dashboard setting
+putenv('APP_KEY=base64:ZRDIgm3AJnVH/tJK2aZnPm5LsSSC8bVi3H43FPWA+wU=');
+$_ENV['APP_KEY'] = 'base64:ZRDIgm3AJnVH/tJK2aZnPm5LsSSC8bVi3H43FPWA+wU=';
+$_SERVER['APP_KEY'] = 'base64:ZRDIgm3AJnVH/tJK2aZnPm5LsSSC8bVi3H43FPWA+wU=';
+
 // Load Composer autoloader
 require __DIR__ . '/../vendor/autoload.php';
 

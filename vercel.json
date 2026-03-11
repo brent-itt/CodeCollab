@@ -21,6 +21,7 @@
     "env": {
         "APP_NAME": "CodeCollab",
         "APP_ENV": "production",
+        "APP_KEY": "base64:ZRDIgm3AJnVH/tJK2aZnPm5LsSSC8bVi3H43FPWA+wU=",
         "APP_DEBUG": "true",
         "APP_URL": "https://code-collab-ivory-xi.vercel.app",
         "VIEW_COMPILED_PATH": "/tmp/storage/framework/views",
