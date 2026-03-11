@@ -19,12 +19,27 @@
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "env": {
+        "APP_NAME": "CodeCollab",
         "APP_ENV": "production",
-        "APP_DEBUG": "true",
-        "APP_URL": "https://codecollab-henna-seven.vercel.app",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://code-collab-ivory-xi.vercel.app",
         "VIEW_COMPILED_PATH": "/tmp/views",
         "CACHE_DRIVER": "array",
+        "CACHE_STORE": "array",
         "SESSION_DRIVER": "cookie",
-        "LOG_CHANNEL": "stderr"
+        "SESSION_LIFETIME": "120",
+        "LOG_CHANNEL": "stderr",
+        "DB_CONNECTION": "pgsql",
+        "DB_PORT": "6543",
+        "DB_DATABASE": "postgres",
+        "DB_SSLMODE": "require",
+        "MAIL_MAILER": "smtp",
+        "MAIL_HOST": "smtp.gmail.com",
+        "MAIL_PORT": "587",
+        "MAIL_ENCRYPTION": "tls",
+        "MAIL_FROM_NAME": "CodeCollab",
+        "FILESYSTEM_DISK": "local",
+        "QUEUE_CONNECTION": "sync",
+        "BROADCAST_CONNECTION": "log"
     }
 }
