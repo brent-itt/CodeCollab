@@ -1,5 +1,17 @@
 <?php
 
+// Catch any fatal startup errors and display them
+set_exception_handler(function ($e) {
+    http_response_code(500);
+    header('Content-Type: text/html');
+    echo '<h1>Startup Error</h1>';
+    echo '<pre>' . htmlspecialchars($e->getMessage()) . "\n" . htmlspecialchars($e->getTraceAsString()) . '</pre>';
+    exit(1);
+});
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 // Set the working directory to the Laravel root
 chdir(__DIR__ . '/..');
 
