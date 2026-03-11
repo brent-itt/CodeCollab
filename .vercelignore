@@ -1,0 +1,16 @@
+.git
+.env
+.env.local
+.env.*.local
+node_modules
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+tests
+phpunit.xml
+.phpunit.result.cache
+README.md
+README_CODECOLLAB.md
+DEPLOYMENT.md
+.editorconfig
